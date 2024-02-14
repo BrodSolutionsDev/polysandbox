@@ -1,0 +1,326 @@
+---
+product:
+    videos:
+        limit: {{theme_settings.productpage_videos_count}}
+    reviews:
+        limit: {{theme_settings.productpage_reviews_count}}
+    related_products:
+        limit: {{theme_settings.productpage_related_products_count}}
+    similar_by_views:
+        limit: {{theme_settings.productpage_similar_by_views_count}}
+---
+{{inject "productId" product.id}}
+{{#partial "page"}}
+    <div class="container">
+        {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+
+        {{#each product.shipping_messages}}
+            {{> components/common/alert-info message}}
+        {{/each}}
+    </div>
+
+    
+
+    <div itemscope itemtype="http://schema.org/Product">
+        <div class="container">
+            {{#if product.id '==' '118'}}
+            {{> components/custom/products/cpd/2110A/product-view schema=true  }}
+            {{else}}
+            {{> components/custom/products/product-view schema=true  }}
+            {{/if}}
+            {{{region name="product_below_content"}}}
+        </div>
+       
+        <div class="bg-grey cpd-techspecs">
+            <div class="container">
+                <h2>Part B Specs</h2>
+                <div class="view">
+                    <div class="table-wrapper">
+                        <table class="content-table">
+                            <thead>
+                                <tr class="table-headers">
+                                    <th class="sticky-col"> Part B </th>
+                                    <th> Resin Density </th>
+                                    <th> Hardener Density </th>
+                                    <th> Resin Viscosity </th>
+                                    <th> Hardener Viscosity </th>
+                                    <th> Mix Ratio by Weight </th>
+                                    <th> Mix Ratio by Volume </th>
+                                    <th> Initial Mixed Viscosity </th>
+                                    <th> Gel Time </th>
+                                    <th> Pot Life </th>
+                                    <th> Color </th>
+                                    <th> Izod Impact </th>
+                                    <th> Tensile Strength </th>
+                                    <th> Tensile Modulus </th>
+                                    <th> Tensile Elongation </th>
+                                    <th> Room Temp Cure </th>
+                                    <th> Post Cure </th>
+                                    <th> Compressibe Strength </th>
+                                    <th> Flexural Strength </th>
+                                    <th> Flexural Modulus </th>
+                                    <th> Hardness (Shore D) </th>
+                                    <th> Linear Shrinkage </th>
+                                    <th> Volumetric Yield </th>
+                                    <th> Volumetric Shield </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                 <tr>
+                                    <td class="sticky-col">
+                                        <a href="/content/2110a_4364b_TDB.pdf">
+                                            4364B HARDENER
+                                        </a>
+                                    </td>
+                                    <td> 9.6 </td>
+                                    <td> 8.0 </td>
+                                    <td> 1,200 </td>
+                                    <td> 30 </td>
+                                    <td> 100A : 33B </td>
+                                    <td> 2.5A : 1B </td>
+                                    <td> 250 </td>
+                                    <td> 6 </td>
+                                    <td> N/A </td>
+                                    <td> Straw Yellow </td>
+                                    <td> 1.06 </td>
+                                    <td> 9,900 </td>
+                                    <td> 408,000 </td>
+                                    <td> 7.1 </td>
+                                    <td> 130 </td>
+                                    <td> 160 </td>
+                                    <td> 12,900 </td>
+                                    <td> 16,300 </td>
+                                    <td> 445,000 </td>
+                                    <td> 83 </td>
+                                    <td> &lt;0.002 </td>
+                                    <td> N/A </td>
+                                    <td> N/A </td>
+                                </tr>
+                                <tr>
+                                    <td class="sticky-col">
+                                        <a href="/content/2110a_9287b_TDB.pdf">
+                                            9287B HARDENER
+                                        </a>
+                                    </td>
+                                    <td> 9.6 </td>
+                                    <td> 7.9 </td>
+                                    <td> 1,200 </td>
+                                    <td> 15 </td>
+                                    <td> 100A : 33B </td>
+                                    <td> 2.5A : 1B </td>
+                                    <td> 200 </td>
+                                    <td> 600 </td>
+                                    <td> 300 </td>
+                                    <td> Clear </td>
+                                    <td> 1.01 </td>
+                                    <td> 9,300 </td>
+                                    <td> 401,000 </td>
+                                    <td> 7.2 </td>
+                                    <td> 120 </td>
+                                    <td> 150 </td>
+                                    <td> 11,700 </td>
+                                    <td> 14,700 </td>
+                                    <td> 440,000 </td>
+                                    <td> 75 </td>
+                                    <td> &lt;0.002 </td>
+                                    <td> N/A </td>
+                                    <td> N/A </td>
+                                </tr>
+                                <tr>
+                                    <td class="sticky-col">
+                                        <a href="/content/2110a_9292b_TDB.pdf">
+                                            9292B HARDENER
+                                        </a>
+                                    </td>
+                                    <td> 9.6 </td>
+                                    <td> 8.1 </td>
+                                    <td> 1,200 </td>
+                                    <td> 40 </td>
+                                    <td> 100A : 33B </td>
+                                    <td> 2.5A : 1B </td>
+                                    <td> 300 </td>
+                                    <td> 60 </td>
+                                    <td> N/A </td>
+                                    <td> Straw Yellow </td>
+                                    <td> 1.56 </td>
+                                    <td> 9,200 </td>
+                                    <td> 407,000 </td>
+                                    <td> 6.6 </td>
+                                    <td> 130 </td>
+                                    <td> 160 </td>
+                                    <td> 11,400 </td>
+                                    <td> 14,200 </td>
+                                    <td> 433,000 </td>
+                                    <td> 78 </td>
+                                    <td> N/A </td>
+                                    <td> 23.7 </td>
+                                    <td> 5.1 </td>
+                                </tr>
+                                <tr>
+                                    <td class="sticky-col">
+                                        <a href="/content/2110a_9380b_TDB.pdf">
+                                            9380B HARDENER
+                                        </a>
+                                    </td>
+                                    <td> 9.6 </td>
+                                    <td> 8.8 </td>
+                                    <td> 1,200 </td>
+                                    <td> 2,100 </td>
+                                    <td> 100A : 22B </td>
+                                    <td> 4.2A : 1B </td>
+                                    <td> 1,500 </td>
+                                    <td> 18 </td>
+                                    <td> N/A </td>
+                                    <td> Clear </td>
+                                    <td> 1.38 </td>
+                                    <td> 9,600 </td>
+                                    <td> 416,000 </td>
+                                    <td> 2.3 </td>
+                                    <td> 180 </td>
+                                    <td> 200 </td>
+                                    <td> 15,900 </td>
+                                    <td> 14,800 </td>
+                                    <td> 427,000 </td>
+                                    <td> 88 </td>
+                                    <td> 0.008 </td>
+                                    <td> N/A </td>
+                                    <td> N/A </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <h2>Request More Information</h2>
+                <form id="partBForm">
+                    <div class="partBForm-row">
+                        <p>
+                            <label for="firstName">First Name:*</label>
+                            <input id="firstName" name="first_name" required>
+                        </p>
+                        <p>
+                            <label for="lastName">Last Name:*</label>
+                            <input id="lastName" name="last_name" required>
+                        </p>
+                    </div>
+                    <div class="partBForm-row">
+                        <p>
+                            <label for="email">Email:*</label>
+                            <input id="email" name="email" type="email" required>
+                        </p>
+                        <p>
+                            <label for="phone">Phone:*</label>
+                            <input id="phone" name="phone" type="tel" required>
+                        </p>
+                    </div>
+                    <p>
+                        <label for="partB">Part B:*</label>
+                        <select id="partB" name="part_b" required></select>
+                    </p>
+                    <p>
+                        <label for="message">Message:</label>
+                        <textarea id="message" rows="3"></textarea>
+                    </p>
+
+                    <button class="button button--primary" type="submit">Submit</button>
+                </form>
+                <script>
+                    window.addEventListener("load", function() {
+                        // grab the options from the part b dropdown
+                        const partBOptions = Array.from(document.querySelectorAll("label")).filter(label => label.innerText.includes("PART B"))[0].nextElementSibling.children;
+                        // grab the select from the contact form
+                        const partBFormSelect = document.getElementById("partB");
+                        // grab the form
+                        const form = document.getElementById("partBForm");
+
+                        // loop over the options from the part b dropdown
+                        for (const option of Array.from(partBOptions)) {
+                            // if no value, skip this option
+                            if (!option.value) continue;
+                            // create a new option
+                            const newOption = document.createElement("option");
+                            // set the value to the options inner text
+                            newOption.value = option.innerText;
+                            // set the option's inner text
+                            newOption.innerText = option.innerText;
+                            // add the option to the form select dropdown
+                            partBFormSelect.appendChild(newOption);
+                        }
+
+                        // when the form is submitted
+                        form.addEventListener("submit", function(e) {
+                            e.preventDefault();
+
+                            // grab the data from the form
+                            const data = {
+                                first_name: document.getElementById("firstName").value,
+                                last_name: document.getElementById("lastName").value,
+                                email: document.getElementById("email").value,
+                                phone: document.getElementById("phone").value,
+                                part_a: "{{product.title}}",
+                                part_b: document.getElementById("partB").value,
+                                message: document.getElementById("message").value
+                            }
+
+                            // send the data to pipedream
+                            fetch('https://eo96bnocgbv6j3w.m.pipedream.net', {
+                                method: "POST",
+                                headers: {
+                                    'Content-Type': "application/json"
+                                },
+                                body: JSON.stringify(data)
+                            })
+                            .then((data) => {
+                                console.log(data);
+                                form.reset();
+                                form.innerHTML = "<p>Thank you for your submission. We will get back with you shortly";
+                            })
+                            .catch(console.error);
+                        });
+                    });
+                </script>
+            </div>
+        </div>
+
+        {{#if product.related_products}}
+            {{#unless theme_settings.related_products_tab}}
+                <div id="tab-related">
+                    <div class="grid-bg">
+                        <div class="container">
+                            <h3 class="main-heading uppercase center"><strong>{{lang 'products.related_products'}}</strong></h3>
+                            {{#if settings.data_tag_enabled}}
+                                {{> components/products/related products=product.related_products columns=6 list="Related Products"}}
+                            {{else}}
+                                {{> components/products/related products=product.related_products columns=6}}
+                            {{/if}}
+                        </div>
+                    </div>
+                </div>
+            {{/unless}}
+        {{/if}}
+        
+        {{#if product.similar_by_views}}
+            {{#unless theme_settings.customer_viewed_products_tab}}
+                <div id="tab-related">
+                    <div class="grid-bg">
+                        <div class="container">
+                            <h3 class="main-heading uppercase center"><strong>{{lang 'products.similar_by_views'}}</strong></h3>
+                            {{> components/products/similar-by-views products=product.similar_by_views columns=6}}
+                        </div>
+                    </div>
+                </div>
+            {{/unless}}
+        {{/if}}
+        
+        {{#if settings.show_product_reviews}}
+            {{#gt product.reviews.total 0}}
+                <div class="container">
+                    <h3 class="main-heading uppercase" id="reviews-accordion">Reviews</h3>
+                    {{> components/products/reviews reviews=product.reviews product=product urls=urls}}
+                </div>
+            {{/gt}}
+        {{/if}}
+    </div>
+    {{> components/custom/product-assistance}}
+{{/partial}}
+{{> layout/base}}

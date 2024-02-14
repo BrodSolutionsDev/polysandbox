@@ -1,0 +1,13 @@
+{
+  "customLayouts": {
+    "brand": {},
+    "category": {},
+    "page": {},
+    "product": {
+      "cpd-product.html": "/2110a-resin"
+    }
+  },
+  "apiHost": "https://api.bigcommerce.com",
+  "normalStoreUrl": "https://store-twtl5hucgv.mybigcommerce.com/",
+  "port": 3000
+}
