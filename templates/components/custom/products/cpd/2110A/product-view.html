@@ -92,7 +92,9 @@
             </div>
 
             <div {{#if schema}} itemprop="description" {{/if}}>
-                {{{product.description}}}
+                <div id="dynamic-productView-description">
+                    {{{product.description}}}
+                </div>
                 {{{snippet 'product_description'}}}
             </div>
 
@@ -251,3 +253,29 @@
     <div class="modal-content"></div>
     <div class="loadingOverlay"></div>
 </div>
+
+<script>
+    window.addEventListener("load", function () {
+        // grab the dynamic description from the DOM
+        const partBDescription = document.getElementById("dynamic-productView-description");
+        // grab the Part B label from the DOM
+        const partBLabel = Array.from(document.querySelectorAll("label")).filter(label => label.innerText.includes("PART B"))[0];
+        // grab the select dropdown from the Part B label
+        const partBSelect = partBLabel.nextElementSibling;
+        // grab the options from the Part B Select
+        const partBOptions = Array.from(partBLabel.nextElementSibling.children);
+
+        partBSelect.addEventListener("change", function (e) {
+            // filter out the selected option from the options list
+            const selected = partBOptions.filter(option => option.value === e.target.value)[0];
+            // update the description based on the selection
+            if (selected.innerText.includes("4364B")) {
+                partBDescription.innerHTML = "<p>CPD 2110A Resin with CPD 4364B Hardener is an extra long pot life, clear, low viscosity, general purpose epoxy compound that may be used in many diverse applications such as casting, laminating, coating and bonding.</p>";
+            } else if (selected.innerText.includes("9380B")) {
+                partBDescription.innerHTML = `<p>CPD 2110A Resin with CPD 9380B Hardener is a fast setting, general purpose epoxy laminating and bonding resin system that is well suited for use in performing quick repairs to various composite structures found in the automotive and marine industries. It has been found particularly useful in performing field repairs and various tooling applications requiring a very fast set up and cure. The system may be used in high humidity situations and it will cure in the presence of moisture.</p>`;
+            } else {
+                partBDescription.innerHTML = `{{{product.description}}}`;
+            }
+        });
+    });
+</script>
