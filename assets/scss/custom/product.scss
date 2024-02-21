@@ -156,6 +156,7 @@ figure.productView-image {
     .partBForm-row {
       display: flex;
       justify-content: space-between;
+      gap: 10px;
 
       input,
       select,
@@ -164,4 +165,27 @@ figure.productView-image {
       }
     }
   }
+}
+
+.cpd-options-inner .form-label {
+  font-size: 18px !important;
+}
+
+.partBForm-checkboxWrapper {
+  display: flex;
+  gap: 10px;
+}
+
+#partBForm-checkboxList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.partBForm-list {
+  margin-bottom: 0;
+}
+
+#partBForm-error {
+  margin: 0;
+  color: red;
 }
