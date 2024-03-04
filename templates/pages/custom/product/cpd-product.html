@@ -22,7 +22,7 @@ product:
     
 
     <div itemscope itemtype="http://schema.org/Product">
-        <div class="container">
+        <div class="container cpd-productView">
             {{#if product.id '==' '118'}}
             {{> components/custom/products/cpd/2110A/product-view schema=true  }}
             {{else}}
@@ -216,7 +216,24 @@ product:
                     <p class="partBForm-list">
                         <label>Part B Hardener:*</label>
                         <p id="partBForm-error" style="display: none;">Please select at least one product.</p>
-                        <div id="partBForm-checkboxList"></div>
+                        <div id="partBForm-checkboxList">
+                            <div class="partBForm-checkboxWrapper">
+                                <input id="4364B_HARDENER" class="partBForm-checkbox" type="checkbox" value="4364B HARDENER">
+                                <label for="4364B_HARDENER">4364B HARDENER</label>
+                            </div>
+                            <div class="partBForm-checkboxWrapper">
+                                <input id="9287B_HARDENER" class="partBForm-checkbox" type="checkbox" value="9287B HARDENER">
+                                <label for="9287B_HARDENER">9287B HARDENER</label>
+                            </div>
+                            <div class="partBForm-checkboxWrapper">
+                                <input id="9292B_HARDENER" class="partBForm-checkbox" type="checkbox" value="9292B HARDENER">
+                                <label for="9292B_HARDENER">9292B HARDENER</label>
+                            </div>
+                            <div class="partBForm-checkboxWrapper">
+                                <input id="9380B_HARDENER" class="partBForm-checkbox" type="checkbox" value="9380B HARDENER">
+                                <label for="9380B_HARDENER">9380B HARDENER</label>
+                            </div>
+                        </div>
                     </p>
                     <p>
                         <label for="message">Message:</label>
@@ -226,39 +243,9 @@ product:
                     <button class="button button--primary" type="submit">Submit</button>
                 </form>
                 <script>
-                    window.addEventListener("load", function() {
-                        // grab the options from the part b dropdown
-                        const partBOptions = Array.from(document.querySelectorAll("label")).filter(label => label.innerText.includes("PART B"))[0].nextElementSibling.children;
-                        // grab the select from the contact form
-                        const partBFormSelect = document.getElementById("partB");
+                    window.addEventListener("load", function() {const partBFormSelect = document.getElementById("partB");
                         // grab the form
                         const form = document.getElementById("partBForm");
-                        // grab the form section to append the checkboxes
-                        const checkboxList = document.getElementById("partBForm-checkboxList");
-
-                        // loop over the options from the part b dropdown
-                        for (const option of Array.from(partBOptions)) {
-                            // if no value, skip this option
-                            if (!option.value) continue;
-                            // create a new wrapper to hold the label and checkbox
-                            const newCheckboxWrapper = document.createElement("div");
-                            newCheckboxWrapper.className = "partBForm-checkboxWrapper";
-                            // create a new label
-                            const newLabel = document.createElement("label");
-                            newLabel.innerText = option.innerText;
-                            newLabel.setAttribute("for", option.innerText.replace(" ", "_"));
-                            // create a new checkbox input
-                            const newCheckbox = document.createElement("input");
-                            newCheckbox.id = option.innerText.replace(" ", "_");
-                            newCheckbox.className = "partBForm-checkbox";
-                            newCheckbox.value = option.innerText;
-                            newCheckbox.type = "checkbox";
-                            // append the checkbox and label to the checkbox wrapper
-                            newCheckboxWrapper.appendChild(newCheckbox);
-                            newCheckboxWrapper.appendChild(newLabel);
-                            // append the checkbox wrapper to the checkbox list
-                            checkboxList.appendChild(newCheckboxWrapper);
-                        }
 
                         // when the form is submitted
                         form.addEventListener("submit", function(e) {

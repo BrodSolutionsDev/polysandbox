@@ -125,8 +125,14 @@ figure.productView-image {
   }
 }
 
+.cpd-productView {
+  .productView-options {
+    display: none;
+  }
+}
+
 .cpd-techspecs {
-  padding: 50px 0;
+  padding: 25px 0;
 
   h2:last-of-type {
     margin-top: 50px;
