@@ -33,7 +33,7 @@ product:
        
         <div class="bg-grey cpd-techspecs">
             <div class="container">
-                <h2>Part B Specs</h2>
+                <h2>System Specifications</h2>
                 <div class="view">
                     <div class="table-wrapper">
                         <table class="content-table">
@@ -213,6 +213,12 @@ product:
                             <input id="phone" name="phone" type="tel" required>
                         </p>
                     </div>
+                    <div class="partBForm-row">
+                        <p>
+                            <label for="companyName">Company Name:*</label>
+                            <input type="text" id="companyName" name="company_name" required>
+                        </p>
+                    </div>
                     <p class="partBForm-list">
                         <label>Part B Hardener:*</label>
                         <p id="partBForm-error" style="display: none;">Please select at least one product.</p>
@@ -266,6 +272,7 @@ product:
                                 last_name: document.getElementById("lastName").value,
                                 email: document.getElementById("email").value,
                                 phone: document.getElementById("phone").value,
+                                company: document.getElementById("companyName").value,
                                 part_a: "{{product.title}}",
                                 part_b: selectedPartBs.map(input => input.nextElementSibling.innerText),
                                 message: document.getElementById("message").value

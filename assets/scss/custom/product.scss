@@ -129,6 +129,44 @@ figure.productView-image {
   .productView-options {
     display: none;
   }
+
+  .productView {
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    height: fit-content;
+    place-items: center;
+
+    .productView-images {
+      height: fit-content;
+      margin-bottom: 0;
+
+      .productView-image {
+        min-height: fit-content;
+
+        .productView-img-container {
+          margin: 0;
+        }
+      }
+      // max-width: 30%;
+      .productView-thumbnails {
+        display: none;
+      }
+    }
+
+    .productView-details {
+      height: fit-content;
+      width: 100%;
+      margin-bottom: 0;
+    }
+
+    @media only screen and (max-width: 600px) {
+      grid-template-columns: 1fr;
+
+      .productView-images {
+        max-width: 50%;
+      };
+    }
+  }
 }
 
 .cpd-techspecs {
